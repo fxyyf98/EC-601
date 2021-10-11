@@ -4,7 +4,7 @@
 import tweepy
 import geocoder
 import json
-
+import re
 
 #Twitter API credentials
 consumer_key = ""
@@ -37,10 +37,10 @@ def search_tweets(keywords,item_limit):
     api = tweepy.API(auth)
     
     #search for tweets using api.search
-    tweets = tweepy.Cursor(api.search,q=keywords).items(item_limit)
-    return tweets
-    
-    
-
-if __name__ == '__main__':
-    get_loc_trends('Boston')
+    tweets = tweepy.Cursor(api.search,q=keywords,lang = "en").items(item_limit)
+    result = []
+    for tweet in tweets:
+        tweet = tweet.text
+        tweet = " ".join(re.sub("([^0-9A-Za-z \t])|(\w+:\/\/\S+)", "", tweet).split())
+        result.append(tweet)
+    return result
