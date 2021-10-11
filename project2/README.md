@@ -17,4 +17,9 @@ A tutorial of Twitter API and Google NLP.
 - ...
 
 ## Tests
-I searched the trends at Boston and picked 2 from them to search for relevent tweets and tested the sentiment of these tweets, and analyzed the result to show a overall attitude about the trend.
+I searched the trends at Boston to search for relevent tweets and tested the sentiment of these tweets, and analyzed the result to show a overall attitude about the trend.
+
+## Reference
+- https://codelabs.developers.google.com/codelabs/cloud-natural-language-python3/index.html
+- https://github.com/tweepy/tweepy
+- https://blog.csdn.net/weixin_40221833/article/details/79522834
