@@ -1,4 +1,4 @@
-import google_api
+import google_nlp
 import twitter_api
 
 trends = get_loc_trends("Boston")
